@@ -81,6 +81,15 @@ body {
       margin-top: 1%;
 }
 
+#add-Cart {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-evenly;
+      gap: 10px;
+      padding: 8px;
+      margin-top: 1%;
+}
 .main-mob {
       /* background-color: blanchedalmond; */
       border: 2px solid white;
@@ -98,6 +107,20 @@ h4 {
 }
 
 .cart {
+      padding: 10px 20px 10px 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      background-color: #ed1f1f;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      border: none;
+      border-radius: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.delete {
       padding: 10px 20px 10px 20px;
       margin-top: 10px;
       margin-bottom: 10px;
@@ -133,4 +156,39 @@ h4 {
       background-color: #ea8f65;
       color: #21056d;
       border: solid 2px #fc0505;
+}
+
+
+
+.increase{
+      padding: 5px;
+      font-size: large;
+      font-weight: 300;
+}
+:hover.increase{
+      padding: 5px;
+      font-size: large;
+      font-weight: 300;
+      background-color: rgb(23, 129, 132)
+}
+
+.quntity{
+      font-size: x-large;
+      font-weight: 600;
+      font-family: 'Times New Roman', Times, serif;
+      
+}
+
+
+.decrease{
+      padding: 5px;
+      font-size: large;
+      font-weight: 300;
+}
+
+:hover.decrease{
+      padding: 5px;
+      font-size: large;
+      font-weight: 300;
+      background-color: rgb(23, 129, 132)
 }

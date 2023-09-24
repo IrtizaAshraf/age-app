@@ -1,29 +1,34 @@
+const div = document.querySelector('#add-Cart');
 const data = localStorage.getItem('cartItem');
 const cartArry = JSON.parse(data);
 console.log(cartArry);
 
-const div = document.querySelector('#addcart');
 
 
+
+
+renderCart()
 function renderCart() {
+      div.innerHTML='';
     for (let i = 0; i < cartArry.length; i++) {
-        div.innerHTML += `
-        <div class="p-[2rem] border-black-200 border-solid border-2 rounded-lg drop-shadow-2xl mt-5">
-                <p><span class="font-bold text-lg">brand:</span> ${cartArry[i].brand}</p>
-                <p><span class="font-bold text-lg">Model:</span> ${cartArry[i].model}</p>
-                <p><span class="font-bold text-lg">Quantity:</span> ${cartArry[i].quantity}</p>
-                <p><span class="font-bold text-lg">Price:</span> ${cartArry[i].price}</p>
-                <p><span class="font-bold text-lg">Total Price:</span> ${cartArry[i].price * cartArry[i].quantity}</p>
-                <button class="bg-[#38bdf8] rounded-md px-2 py-1 text-white mt-4 hover:bg-[#00a4ec]" onclick="increaseQuantity(${i})">+</button>
-                <span>${cartArry[i].quantity}</span>
-                <button class="bg-[#38bdf8] rounded-md px-2 py-1 text-white mt-4 hover:bg-[#00a4ec]" onclick="decreaseQuantity(${i})">-</button> <br/>
-                <button  class="bg-[#38bdf8] rounded-md px-2 py-1 text-white mt-4 hover:bg-[#00a4ec]" onclick="deleteItem(${i})">Delete</button>
-        </div>
-        `
+        div.innerHTML += `<div class="main-mob"><h3>${cartArry[i].brand}</h3>
+        <img src="${cartArry[i].img}" class="image">
+        <h4>Model:${cartArry[i].model}</h4>
+        <h4>Ram:${cartArry[i].ram} Gb</h4>
+        <h4>Rom:${cartArry[i].rom}Gb</h4>
+        <h4>Camra:${cartArry[i].camera}</h4>
+        <h4>Price: ${cartArry[i].price}</h4>
+        <h4>TotlePrice: ${cartArry[i].TotalPrice}</h4>
+        <button class="increase" onclick="increaseQuantity(${i})">+</button>
+        <span class="quntity">${cartArry[i].quantity}</span>
+        <button class="decrease" onclick="decreaseQuantity(${i})">-</button> <br/>
+        <button  class="delete" onclick="deleteItem(${i})">Delete<i class="fa-solid fa-trash-can fa-fade"></i></button>
+        <button class="order">Order Now<i class="fa-brands fa-opencart fa-beat-fade"></i></button>
+        </div>`
     }
 }
 
-renderCart()
+
 
 function increaseQuantity (index){
     div.innerHTML = ''
