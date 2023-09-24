@@ -115,13 +115,13 @@ function addToCart(index) {
                 cartArry[i].quantity += 1
             }
         }
-        Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: 'Item quantity updated successfully',
-            showConfirmButton: false,
-            timer: 1500
-        })
+        // Swal.fire({
+        //     position: 'top-end',
+        //     icon: 'success',
+        //     title: 'Item quantity updated successfully',
+        //     showConfirmButton: false,
+        //     timer: 1500
+        // })
     } else {
         console.log('Not Include ');
         phones[index].quantity = 1
@@ -135,4 +135,13 @@ function addToCart(index) {
         })
     }
     // console.log(cartArry);
+}
+
+
+
+function goToCart() {
+    const cart = JSON.stringify(cartArry);
+    localStorage.setItem('cartItem' , cart);
+    console.log('cart called');
+    window.location = 'cart.html';
 }
