@@ -18,7 +18,7 @@ function renderCart() {
         <h4>Rom:${cartArry[i].rom}Gb</h4>
         <h4>Camra:${cartArry[i].camera}</h4>
         <h4>Price: ${cartArry[i].price}</h4>
-        <h4>TotlePrice: ${cartArry[i].TotalPrice}</h4>
+        <h4>TotlePrice: ${cartArry[i].price *cartArry[i].quantity}</h4>
         <button class="increase" onclick="increaseQuantity(${i})">+</button>
         <span class="quntity">${cartArry[i].quantity}</span>
         <button class="decrease" onclick="decreaseQuantity(${i})">-</button> <br/>
@@ -43,7 +43,7 @@ function decreaseQuantity (index){
     renderCart()
     if(cartArry[index].quantity === 0){
         div.innerHTML = ''
-        cartArr.splice(index , 1)
+        cartArry.splice(index , 1)
         renderCart()
     }
 }
