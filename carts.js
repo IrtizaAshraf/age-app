@@ -10,6 +10,7 @@ console.log(cartArry);
 renderCart()
 function renderCart() {
       div.innerHTML='';
+    const total = document.querySelector('.totalprice');
     for (let i = 0; i < cartArry.length; i++) {
         div.innerHTML += `<div class="main-mob"><h3>${cartArry[i].brand}</h3>
         <img src="${cartArry[i].img}" class="image">
@@ -26,6 +27,19 @@ function renderCart() {
         <button class="order">Order Now<i class="fa-brands fa-opencart fa-beat-fade"></i></button>
         </div>`
     }
+
+    p.innerHTML += `<div class="total">Total Price: ${total}</div>`;
+    // totalpric()
+    // function totalpric() {
+    
+       
+    //     // const text= document.createTextNode("Total Price:")
+    //     // p.appendChild(text)
+    //     // console.log(p);
+         
+        
+    
+    // }
 }
 
 
@@ -54,3 +68,4 @@ function deleteItem(index){
     cartArry.splice(index , 1);
     renderCart()
 }
+
