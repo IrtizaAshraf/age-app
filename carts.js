@@ -10,7 +10,7 @@ console.log(cartArry);
 renderCart()
 function renderCart() {
       div.innerHTML='';
-    const total = document.querySelector('.totalprice');
+    const der = document.querySelector('#totalprice');
     for (let i = 0; i < cartArry.length; i++) {
         div.innerHTML += `<div class="main-mob"><h3>${cartArry[i].brand}</h3>
         <img src="${cartArry[i].img}" class="image">
@@ -28,7 +28,7 @@ function renderCart() {
         </div>`
     }
 
-    p.innerHTML += `<div class="total">Total Price: ${total}</div>`;
+    der.innerHTML += `<div class="total">Total Price: ${der}</div>`;
     // totalpric()
     // function totalpric() {
     
