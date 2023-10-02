@@ -101,8 +101,11 @@ for(let i = 0; i<phones.length;i++){
     </div>`
 }
     
-const cartArry= []
-
+const cartArry = []
+const item = localStorage.getItem('cartItem');
+const JsonData = JSON.parse(item);
+console.log(JsonData);
+const cartArr = [...JsonData]
 
 
 
