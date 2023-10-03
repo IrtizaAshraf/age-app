@@ -105,7 +105,7 @@ const cartArry = []
 const item = localStorage.getItem('cartItem');
 const JsonData = JSON.parse(item);
 console.log(JsonData);
-const cartArr = [...JsonData]
+const cartArry = [...JsonData]
 
 
 

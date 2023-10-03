@@ -15,6 +15,7 @@ function renderCart() {
     totalpric.innerHTML = ''
     if (cartArry.length > 0) {
         for (let i = 0; i < cartArry.length; i++) {
+            totalAmount += cartArry[i].price * cartArry[i].quantity
             div.innerHTML += `<div class="main-mob"><h3>${cartArry[i].brand}</h3>
             <img src="${cartArry[i].img}" class="image">
             <h4>Model:${cartArry[i].model}</h4>
@@ -32,7 +33,7 @@ function renderCart() {
 
         }
 
-        totalpric.innerHTML = `Total Amount: RS${ totalAmount}`
+        totalpric.innerHTML = `Total Amount: RS ${ totalAmount}`
     }
 
      
