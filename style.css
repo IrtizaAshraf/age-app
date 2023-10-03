@@ -193,7 +193,10 @@ h4 {
       background-color: rgb(23, 129, 132)
 }
 
-
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Libre+Baskerville:ital@1&family=Poppins:wght@900&display=swap');
 #totalprice{
       color: black;
+      text-align: center;
+      font-family:'Croissant+One&family=Libre+Baskerville' ;
+      padding: 50px;
 }

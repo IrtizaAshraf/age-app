@@ -101,11 +101,12 @@ for(let i = 0; i<phones.length;i++){
     </div>`
 }
     
-const cartArry = []
-const item = localStorage.getItem('cartItem');
-const JsonData = JSON.parse(item);
+// const cartArry = [];
+const cartData = localStorage.getItem('cartItem');
+const JsonData = JSON.parse(cartData);
 console.log(JsonData);
-const cartArry = [...JsonData]
+const cartArry = [...JsonData];
+
 
 
 
@@ -118,13 +119,7 @@ function addToCart(index) {
                 cartArry[i].quantity += 1
             }
         }
-        // Swal.fire({
-        //     position: 'top-end',
-        //     icon: 'success',
-        //     title: 'Item quantity updated successfully',
-        //     showConfirmButton: false,
-        //     timer: 1500
-        // })
+      
     } else {
         console.log('Not Include ');
         phones[index].quantity = 1
