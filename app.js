@@ -105,8 +105,13 @@ for(let i = 0; i<phones.length;i++){
 const cartData = localStorage.getItem('cartItem');
 const JsonData = JSON.parse(cartData);
 console.log(JsonData);
-const cartArry = [...JsonData];
+let cartArry;
+if(Array.isArray(JsonData)){
+    cartArry = [...JsonData]
 
+}else{
+    cartArry = []
+}
 
 
 
@@ -132,7 +137,7 @@ function addToCart(index) {
             timer: 1500
         })
     }
-    // console.log(cartArry);
+    console.log(cartArry);
 }
 
 
